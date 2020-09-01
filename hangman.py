@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from string import ascii_letters
-from random import randint
+from random import randint, seed
 from os import system, path, get_terminal_size
 from sys import argv
 from json import load, dump
@@ -34,6 +34,7 @@ class Hangman:
     @staticmethod
     def get_random_word(wordlist):
         """ Returns a random word from a list of strings.   """
+        seed()
         return list(wordlist[randint(0, len(wordlist) - 1)])
 
     @staticmethod
@@ -48,7 +49,7 @@ class Hangman:
 
     @staticmethod
     def get_wordlist(dict_key, dict_source):
-        """ Returns 2 variables. First the name of the list, second the list itself. """
+        """ Returns a tuple containing 2 variables. First the string name of the list, second the list object itself. """
         if dict_key == "random":
             random_list = list(dict_source.keys())[randint(0, len(dict_source) - 1)]
             return random_list, dict_source[random_list]
@@ -96,7 +97,7 @@ class Hangman:
 
         input(Hangman.print_centered(["\n", "press any button to clear screen"]))
 
-    def add_wordlist(self, save_permanently=True):
+    def add_wordlist(self, save_permanently=False):
         """ Prompts for a string input with the format; 'category,entry,entry,entry'. Updates the hangman_wordlist.json file if 'save_permanently' argument is True. """
         Hangman.print_centered(
             [
@@ -187,7 +188,7 @@ class Hangman:
 
             # Attempt to add to / create a wordlist
             elif command == "add":
-                self.add_wordlist()
+                self.add_wordlist(save_permanently=True)
                 self.handle_gamestate()
 
             # Show items in desired wordlist

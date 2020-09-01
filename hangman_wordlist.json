@@ -100,7 +100,10 @@
         "castlevania",
         "ori and the blind forest",
         "minecraft",
-        "league of legends"
+        "league of legends",
+        "boneworks",
+        "vrchat",
+        "half life alyx"
     ],
     "tv shows": [
         "breaking bad",
@@ -135,7 +138,9 @@
         "tesla",
         "porsche",
         "honda",
-        "ford"
+        "ford",
+        "nissan",
+        "skoda"
     ],
     "programming languages": [
         "python",
@@ -256,5 +261,28 @@
         "fleetwood mac",
         "nirvana",
         "creedence clearwater revival"
+    ],
+    "sports": [
+        "baseball",
+        "archery",
+        "boxing",
+        "cricket",
+        "curling",
+        "dart",
+        "fencing",
+        "golf",
+        "hockey",
+        "skating",
+        "chess",
+        "horseback riding",
+        "parkour",
+        "sailing",
+        "snowboarding",
+        "snorkeling",
+        "taekwondo",
+        "tennis",
+        "ultramarathon",
+        "wrestling",
+        "water polo"
     ]
 }
